@@ -1,0 +1,7 @@
+# Agent configuration (reference: agentic_rag_contracts)
+# Override via env: OPENROUTER_* for primary LLM
+agents:
+  listing_agent:
+    role: "Live Bhoomi Listing Assistant"
+    system_prompt: "configs/prompts/system/listing_agent.md"
+    llm: primary
