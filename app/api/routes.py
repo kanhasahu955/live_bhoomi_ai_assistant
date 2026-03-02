@@ -14,12 +14,8 @@ from app.pipeline.chat import chat as run_chat, chat_stream_with_steps
 from app.db.status import get_db_status
 
 router = APIRouter(prefix="/ai", tags=["AI"])
-
-
 class ChatRequest(BaseModel):
     message: str
-
-
 class ListingReference(BaseModel):
     id: str
     title: str
@@ -33,8 +29,6 @@ class ListingReference(BaseModel):
     bathrooms: int | None
     area: float | None
     slug: str
-
-
 class ChatResponse(BaseModel):
     reply: str
     references: list[ListingReference] = []
